@@ -23,7 +23,7 @@ header nav li>a:hover, header .nav li.on>a{color:#d02c0d}
 .main_con .txt_wrap p{font-size:18px;color:#9fa3a7;margin:30px 0 40px}
 .main_con .btn_wrap a{display:inline-block;height:46px;font-size:15px;line-height:46px;font-weight:bold;border-radius:24px;padding:0 40px;background-color:#ffc80a;}
 .main_con .btn_wrap a:hover{color:#fff;background-color:#1b87ba}
-.main_con .main_img{position:absolute;top:0;right:0;width:811px;height:548px;}
+.main_con .main_img{position:absolute;top:0;right:0;}
 .main_con .main_img>img{position:absolute;z-index:1}
 .main_con .main_img .desktop{top:-39px;right:257px;transform: perspective(2278px) rotateX(-66deg);}
 .main_con .main_img:before{position:absolute;content:'';top:0;right:0;width:811px;height:548px;background:url(../imgs/main.png)0 0 no-repeat}
@@ -141,7 +141,8 @@ header nav li>a:hover, header .nav li.on>a{color:#d02c0d}
     .section{height:auto}
     .main_con{padding:0 0 50px;}
     .main_con .txt_wrap{margin:0 auto}
-    .main_con .main_img{display:none}
+    .main_con .txt_wrap p{color:#000}
+    .main_con .main_img{opacity:.1;transition: opacity .5s}
     .skill .diagram{width:200px;height:200px;}
     .skill .diagram .polygon{width:200px;height:200px}
     .skill .diagram li{left:54px;font-size:12px}
