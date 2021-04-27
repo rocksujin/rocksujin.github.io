@@ -16,9 +16,10 @@
             <a href="index.html" class="logo">R</a>
             <nav>
                 <ul>
-                    <li><a href="#skill">Skills</a></li>
-                    <li><a href="work.html">Portfolio</a></li>
-                    <li><a href="#">Study</a></li>
+                    <li><a href="#skill">HOME</a></li>
+                    <li><a href="#skill">ABOUT</a></li>
+                    <li><a href="work.html">PORTFOLIO</a></li>
+                    <li><a href="#">STUDY</a></li>
                 </ul>
             </nav>
         </header>
@@ -136,6 +137,51 @@
                 </div>
             </div>
 
+            <div class="section portfolio">
+                <div class="lft_con">
+
+                    <div class="preview">
+                        <div class="slider slider-for">
+                            <div class="slick-slide"><img src="http://placehold.it/100x100?text=4"></div>
+                            <div class="slick-slide"><img src="imgs/westudio.png" width="100" alt=""></div>
+                            <div class="slick-slide"><img src="http://placehold.it/100x100?text=3"></div>
+                            <div class="slick-slide"><img src="http://placehold.it/100x100?text=3"></div>
+                        </div>
+                        <div class="slider slider-nav">
+                            <div class="slick-slide"><img src="http://placehold.it/100x100?text=4"></div>
+                            <div class="slick-slide"><img src="imgs/westudio.png" width="100" alt=""></div>
+                            <div class="slick-slide"><img src="http://placehold.it/100x100?text=3"></div>
+                            <div class="slick-slide"><img src="http://placehold.it/100x100?text=3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rgt_con">
+                    <h3 class="svc_title">Service Title</h3>
+                    <div class="svc_desc">
+                        <ul class="tabs">
+                            <li><button type="button" class="btn_about on">ABOUT</button>
+                            </li><li><button type="button" class="btn_detail">DETAILS</button></li>
+                        </ul>
+                        <p class="desc_a">LIVE스트리밍 전문 서비스로 다크 모드 UI</p>
+                        <p class="desc_d">2020.04 ~ </p>
+
+                    </div>
+                    <dl class="svc_info">
+                        <div class="theme">
+                            <dt>THEME</dt>
+                            <dd>
+                                <span><span class="blind">라이트 모드</span></span><span class="dark selected"><span class="blind">다크 모드</span></span>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>STACK</dt>
+                            <dd>HTML / CSS / JavaScript</dd>
+                        </div>
+                    </dl>
+                    <a href="#" class="go_back">Back to List</a>
+                </div>
+
+            </div>
         </div>
         <footer>
             <ul>
@@ -146,7 +192,41 @@
     </div>
 
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/slick.min.js"></script>
+
 <script>
+
+    $(".btn_about").click(function(){
+        $(this).addClass("on");
+        $(".btn_detail").removeClass("on");
+        $(".desc_d").css("display", "none");
+        $(".desc_a").css("display", "block");
+    });
+    $(".btn_detail").click(function(){
+        $(this).addClass("on");
+        $(".btn_about").removeClass("on");
+        $(".desc_a").css("display", "none");
+        $(".desc_d").css("display", "block");
+    });
+
+
+    $('.slider-for').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         fade: true,
+         arrows: false,
+         asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         asNavFor: '.slider-for',
+         centerMode: true,
+         focusOnSelect: true,
+         draggable: false,
+         arrows: true,
+         variableWidth: true
+        });
 </script>
 </body>
 </html>
