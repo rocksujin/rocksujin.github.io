@@ -16,7 +16,7 @@ header nav ul{display:flex;display: -ms-flexbox;justify-content:flex-end;-ms-fle
 header nav li>a{display:block;color:#9fa3a7;text-align:center;font-size:15px;line-height:54px;padding:0 18px;}
 header nav li>a:hover, header .nav li.on>a{color:#d02c0d}
 header:after{content:'';display:table;clear:both}
-.container{position:relative;flex:1;}
+.container{position:relative;flex:1;-ms-flex:0 1 auto;}
 .section{position:relative;width:100%;height:100vh}
 .main_con{position:absolute;top:50%;left:0;right:0;height:550px;padding:80px 650px 50px 100px;margin-top:-275px;box-sizing:border-box;}
 .main_con .txt_wrap{position:relative;width:300px;z-index:1}
@@ -39,7 +39,7 @@ header:after{content:'';display:table;clear:both}
 .work_list li>a:hover{color:#fff;background-color:#ffc80a}
 .work_list li>a:hover .category{color:#fff}
 
-.section.portfolio{height:auto;min-width:1024px;padding:40px 0}
+.section.portfolio{height:auto;padding:40px 0}
 .portfolio:after{content:'';display:table;clear:both}
 .portfolio .lft_con{float:left;width:50%;background:beige;}
 .portfolio .lft_con .preview{position:relative;width:100%;height:100%;margin:40px auto}
@@ -71,12 +71,12 @@ header:after{content:'';display:table;clear:both}
 .portfolio .rgt_con .go_back{display:inline-block;height:40px;font-size:14px;color:#fff;line-height:40px;border-radius:25px;padding:0 40px;background-color:#ffc80a;margin-top:50px}
 .portfolio .rgt_con .go_back:hover{background-color:#8f75be}
 
-.section.skill{min-height:700px;color:#fff;background:#8f75be}
+.section.skill{min-height:760px;color:#fff;background:#8f75be}
 .skill .con_wrap{display:flex;display: -ms-flexbox;align-items:center;flex-wrap:wrap;-ms-flex-wrap:wrap;max-width:1240px;height:100%;padding:0 60px;margin:0 auto;}
 .skill .tit_wrap{padding:40px 0 20px}
 .skill .sub_title{text-align:left;padding:0}
-.skill .sub_title+p{max-width:300px;vertical-align:top;font-size:14px;line-height:18px;padding-top:20px}
-.skill .con_wrap div[class*="_con"]{flex:1;min-width:100%;box-sizing:border-box;}
+.skill .sub_title+p{max-width:300px;vertical-align:top;font-size:14px;line-height:20px;padding-top:20px;word-break:keep-all;}
+.skill .con_wrap div[class*="_con"]{flex:1;-ms-flex:0 1 auto;box-sizing:border-box;}
 .skill .mid_con{padding:0 120px}
 .skill .rgt_con{text-align:right}
 .skill .diagram{position:relative;width:400px;height:400px;border-radius:50%;border:1px solid #9f8bcc;margin:70px auto}
@@ -100,14 +100,14 @@ header:after{content:'';display:table;clear:both}
 .skill .diagram li:nth-child(5):before,
 .skill .diagram li:nth-child(6):before{bottom:5px;left:auto;right:2px}
 .skill .diagram li:nth-child(2) .description,
-.skill .diagram li:nth-child(3) .description,
-.skill .diagram li:nth-child(5) .description,
-.skill .diagram li:nth-child(6) .description{top:26px}
-.skill .diagram li:nth-child(4) .description{top:-64px}
+.skill .diagram li:nth-child(3) .description{top:26px;left:-82px}
+.skill .diagram li:nth-child(5) .description{top:26px;left:30px}
+.skill .diagram li:nth-child(6) .description{top:26px;left:-40px}
+.skill .diagram li:nth-child(4) .description{top:-104px;left:-19px}
 .skill .diagram li:nth-child(4) .description:before{top:auto;bottom:-4px;transform:rotate(180deg)}
-.skill .diagram .polygon{position:relative;width:400px;height:400px;clip-path:polygon(50% 5%, 72% 37%, 78% 66%, 50% 88%, 15% 70%, 17% 31%);background:rgba(255,200,11,.6);z-index:1;}
-.skill .tip{display:inline-block;position:relative;padding-left:8px}
-.skill .tip:before{position:absolute;content:'';top:5px;left:0;width:5px;height:5px;border-radius:50%;background:#fff}
+.skill .diagram .polygon{position:relative;width:400px;height:400px;clip-path:polygon(50% 5%, 72% 37%, 78% 66%, 50% 95%, 15% 70%, 17% 31%);background:rgba(255,200,11,.6);z-index:1;}
+.skill .tip{display:inline-block;position:relative;font-size:14px;padding-left:8px}
+.skill .tip:before{position:absolute;content:'';top:6px;left:0;width:5px;height:5px;border-radius:50%;background:#fff}
 
 .dark{background-color:#181616;transition-duration:1s;}
 .dark header, .dark a{color:#fff;transition-duration:.5s;}
@@ -118,8 +118,8 @@ header:after{content:'';display:table;clear:both}
 .showcase img{box-shadow:16px 16px 34px 0 rgba(0,0,0,.11);transition-duration:.5s}
 
 /* Footer */
-footer{height:68px;background:#d0dee0}
-footer ul{display:flex;display: -ms-flexbox;align-items:center;justify-content:center;height:100%}
+footer{height:68px;padding:0 10px;background:#d0dee0;}
+footer ul{display:flex;display:-ms-flexbox;align-items:center;justify-content:center;flex-wrap:wrap;-ms-flex-wrap:wrap;height:100%}
 footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
 
 /* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
@@ -132,15 +132,18 @@ footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
     .main_con .main_img{width:460px}
     .main_con .main_img:before{width:580px}
     .main_con .main_img .desktop{right:27px;}
+    .skill .con_wrap div[class*="_con"]{min-width:100%}
 
 }
 @media all and (max-width:1024px) {
-    .skill .con_wrap{max-width:auto}
-    .skill .lft_con{display:block;width:auto;padding:0 40px;}
+    .skill .con_wrap{max-width:none}
+    .skill .lft_con{display:block;width:auto;text-align:center;padding:0 40px;}
     .skill .lft_con .sub_title{display:inline-block;}
     .skill .lft_con .sub_title+p{display:inline-block;padding-top:0;margin-left:20px}
-    .skill .rgt_con{display:block;padding-left:0;}
+    .skill .rgt_con{display:block;padding-bottom:20px;}
+    .portfolio .lft_con, .portfolio .rgt_con{float:none;width:auto;}
 }
+
 
 /* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
 @media all and (max-width:767px) {
@@ -148,6 +151,7 @@ footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
     .main_con .txt_wrap{margin:0 auto}
     .main_con .txt_wrap p{color:#000}
     .main_con .main_img{opacity:.1;transition: opacity .5s}
+    .skill .mid_con{padding:0}
     .skill .diagram{width:200px;height:200px;}
     .skill .diagram .polygon{width:200px;height:200px}
     .skill .diagram li{left:54px;font-size:12px}
@@ -157,13 +161,16 @@ footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
     .skill .diagram li:nth-child(5){top:143px;left:-89px;padding-right:6px}
     .skill .diagram li:nth-child(6){top:40px;padding-right:6px}
 
-    .work_list li{max-width:200px;}
+    .work_list li{max-width:180px;}
+    .work_list li .category{font-size:10px}
+    .work_list li h3{font-size:16px}
     .work_list li img{width:150px;margin-left:-34px}
 
 }
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
 @media all and (max-width:479px) {
+    header nav li>a{padding:0 10px}
     .skill .lft_con .sub_title+p{margin:10px 0 0}
 
 }
@@ -288,3 +295,7 @@ footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+<!--[if !IE]> -->
+    .content .polygon{display:none}
+<!-- <![endif]-->
