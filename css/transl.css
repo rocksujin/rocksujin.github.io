@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, code, em, img, strong, dl, dt, dd, ol, ul, li, table, footer{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}
+ol, ul{list-style:none}
+a{text-decoration:none}
+
+.header{position:relative;height:300px;padding:3rem 2rem 1rem;background:#100e17}
+.header:before{position:absolute;content:'';top:0;right:0;width:75%;height:90%;background-image:radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.5), #100e17),
+        url(https://res.cloudinary.com/css-tricks/image/fetch/w_1200,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2020/06/dark-mode-guide.png);background-size:cover;background-repeat:no-repeat;opacity:.75;}
+.header h1{position:relative;font-size:45px;color:#fff;z-index:1}
+.header .info_article{position:relative;font-size:14px;color:#7a7a8c;font-weight:bold;margin:30px 0;z-index:1}
+.header .info_article:after{content:'';display:table;clear:both;}
+.header .info_article>div{float:left;line-height:22px;margin-right:20px}
+.header .info_article dd{color:#fff;font-family: "Georgia", serif;font-weight:normal;margin-left:0}
+.header .info_article dd a{color:#fff;font-family: "Georgia", serif;font-weight:normal;}
+.content_wrap{background:#100e17;padding-bottom:40px}
+.orig_link{min-height:70px;font-family: "Georgia", serif;color:#fff;font-size:18px;background:linear-gradient(90deg,#ff8a00,#e52e71);border-radius:8px;padding:23px 30px;margin:0 20px 0 10px;box-sizing:border-box;}
+.orig_link a{color:#fff;}
+.orig_link a:hover{text-decoration:underline}
+.content{max-width:1400px;font-size:16px;background:#fff;padding:70px;border-radius:8px;margin:-10px 150px 0 30px}
+.content p{width:80%;font-family:'Nanum Myeongjo', sans-serif;font-size:16px;line-height:26px;}
+.content p + p{margin-top:16px}
+.content .intro>img,.content .parts>img{max-width:100%;border-radius:8px;margin:30px auto 0}
+.content .img_info{display:block;font-size:14px;color:#767676;margin:8px 0 20px}
+.content .intro .img_info+p{margin-top:30px}
+.content .toc{font-size:18px;background:#fef6ec;padding:40px;border-radius:8px;margin-top:40px}
+.content .toc>strong{font-size:24px;}
+.content .toc li{font-weight:bold;margin-top:12px;margin-left:20px}
+.content .toc li>a{color:#007db5;font-size:18px;font-family:'Nanum Myeongjo', sans-serif;text-decoration:underline;margin-left:6px}
+.content .toc li>a:hover{color:#ff8a00}
+.content .separator{display:block;height:4px;background:linear-gradient(90deg,#ff8a00,#e52e71);border-radius:2px;margin:40px 0}
+.content .parts h2{font-size:30px;margin-bottom:20px}
+.content .parts h3{font-size:24px;margin:40px 0 20px}
+.content .parts h4{font-size:19px;margin-bottom:12px}
+.content .parts .highlight{background:#fff6ea}
+.content .sample{margin:20px 0}
+.content .sample:after{content:'';display:table;clear:both;}
+.content .sample li{float:left;width:calc(50% - 15px);padding:20px;background:#fff0d4;border-radius:8px;margin-right:30px;box-sizing:border-box;}
+.content .sample li:nth-child(even){margin-right:0}
+.content .sample li:nth-child(3),.content .sample li:nth-child(4){margin-top:10px}
+.content .sample li summary{font-size:18px;color:#000;}
+.content .sample li summary h4{display:inline-block;vertical-align:top;margin-bottom:0}
+.content .sample li p{width:100%;margin:10px 0}
+.content .sample pre{position:relative;}
+.content .sample pre:before{position:absolute;top:23px;right:8px;content:'HTML';font-size:13px;color:#ff8a00;}
+.content .sample pre.js:before{content:'JavaScript'}
+.content .sample pre.css:before{content:'CSS'}
+.content .sample pre.php:before{content:'PHP'}
+.content .sample code{line-height:24px;padding:0 20px;border-radius:8px}
+.content .sample code.highlight{padding:0 4px}
+.content .colors_ex li{display:inline-block;width:calc(33.3% - 16px);height:140px;border-radius:10px;border:1px solid #ccc;padding:8px;margin:8px}
+.content .colors_ex li p{width:100%;height:100%;color:#fff;font-size:14px;text-align:center;background:#232B32;padding:18% 0;word-break:break-all;box-sizing:border-box;}
+.content .colors_ex li:nth-child(2) p{background:#152028}
+.content .colors_ex li:nth-child(3) p{background:#202945}
+.content .numbering{font-family:'Nanum Myeongjo', sans-serif;font-size:16px;line-height:30px;margin:20px;list-style:decimal;}
+.content .numbering li::marker{font-family:initial;font-weight:bold;color:#ff7a18}
+
+/* Images compare main container */
+.content .compare_wrap{max-width:600px;padding:15px;border-radius:8px;background:#fef6ed;margin-left:0}
+.images-compare-container {display:inline-block;position:relative;overflow:hidden;}
+.images-compare-before {will-change:clip;position:absolute;top:0;left:0;pointer-events:none;overflow:hidden;z-index:2;}
+.images-compare-after {pointer-events: none;}
+.images-compare-before img, .images-compare-after img{display:block;max-width: 100%;height: auto;}
+.images-compare-separator{position:absolute;top:0;left:0;width:1px;height:100%;background:#fff;z-index:4;}
+.images-compare-handle{height:38px;width:38px;position:absolute;left:50%;top:50%;margin-left:-19px;margin-top:-19px;border:3px solid #fff;border-radius:50%;box-shadow: 0 0 12px rgba(51, 51, 51, 0.5);z-index:3;background:rgba(0, 0, 0, 0.7);cursor:pointer;}
+.images-compare-left-arrow, .images-compare-right-arrow{position: absolute;top:50%;margin-top:-6px;width:0;height:0;border:6px inset transparent;}
+.images-compare-left-arrow{left:50%;border-right:6px solid #fff;margin-left:-16px;}
+.images-compare-right-arrow{right:50%;border-left: 6px solid #fff;margin-right:-18px;}
+
+/* media query */
+@media all and (max-width:1023px) {
+ .content{margin-right:40px}
+ .content p{width:100%}
+}
