@@ -436,7 +436,7 @@
         });
     };
 
-})(jQuery, window, document);
+});
 
 // http://www.jacklmoore.com/notes/naturalwidth-and-naturalheight-in-ie/
 (function ($) {
