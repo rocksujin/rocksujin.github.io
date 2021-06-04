@@ -29,7 +29,7 @@ section .con_wrap{margin:0 auto}
 .main_con .btn_wrap a:hover{color:#fff;background-color:#1b87ba}
 .main_con .main_img{position:absolute;top:20px;right:0;}
 .main_con .main_img>img{position:absolute;z-index:1}
-.main_con .main_img .desktop{top:-69px;right:258px;transform:perspective(2706px) rotateX(-70deg)}
+.main_con .main_img .desktop{top:-73px;right:258px;transform:perspective(2865px) rotateX(-72deg);-ms-transform:perspective(2706px) rotateX(-70deg);-webkit-transform:perspective(2706px) rotateX(-70deg)}
 .main_con .main_img .mobile{top:60px;right:129px}
 .main_con .main_img .ipad{top:311px;right:-90px}
 .main_con .main_img:before{position:absolute;content:'';top:0;right:0;width:811px;height:548px;background:url(../imgs/main.png)0 0 no-repeat}
@@ -76,7 +76,7 @@ section.skill{color:#fff;background:#8f75be}
 
 /* Footer */
 footer{height:68px;padding:0 10px;background:#d0dee0;}
-footer ul{display:flex;display:-ms-flexbox;display:-webkit-flex;align-items:center;-ms-flex-align:center;-webkit-align-items:center;justify-content:center;-ms-flex-pack:center;-webkit-justify-content:center;flex-wrap:wrap;-ms-flex-wrap:wrap;height:100%}
+footer ul{display:flex;display:-ms-flexbox;display:-webkit-flex;align-items:center;-ms-flex-align:center;-webkit-align-items:center;justify-content:center;-ms-flex-pack:center;-webkit-justify-content:center;flex-wrap:wrap;-ms-flex-wrap:wrap;-webkit-flex-wrap:wrap;height:100%}
 footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
 
 
@@ -92,7 +92,7 @@ footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 767px)*/
 @media all and (max-width:767px) {
     .main_con{padding:80px 0 50px;}
-    .main_con .txt_wrap{margin:0 auto}
+    .main_con .txt_wrap{text-align:center;margin:0 auto}
     .main_con .txt_wrap p{color:#000}
     .main_con .main_img{opacity:.1;transition: opacity .5s}
     .work .img_wrap{position:absolute;top:15px;left:50%;width:60%;margin-left:-30%;padding-bottom:0}
@@ -104,7 +104,6 @@ footer li{color:#4a4a4a;font-size:11px;margin:0 12px}
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
 @media all and (max-width:479px) {
     header nav li>a{font-size:13px;padding:0 10px}
-    .main_con .txt_wrap{text-align:center}
     .main_con .txt_wrap h2{font-size:36px}
     .main_con .txt_wrap p{font-size:16px}
     .skill .tit_wrap p{font-size:13px;line-height:26px}
