@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <meta name="author" content="Sujin Ryu"> -->
+    <title>UI 개발자 류수진</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="index.html" class="logo"><img src="imgs/logo.png" width="36"></a>
+            <nav>
+                <ul>
+                    <li><a href="#skill">ABOUT</a></li>
+                    <li><a href="#work">PORTFOLIO</a></li>
+                    <li><a href="/translation/" target="_blank">BLOG</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <section id="intro">
+                test
+            </section>
+
+        </main>
+
+        <footer>
+            <ul>
+    			<li class="copyright">Copyright © <strong>2021 RSJ.</strong> All rights reserverd</li>
+    			<li>Email : s.ryu8643@gmail.com</li>
+    		</ul>
+        </footer>
+    </div>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/slick.js"></script>
+
+<script>
+
+//side_nav
+
+$(function() {
+    $(window).scroll(function() {
+         if ($(this).scrollTop() > 250) {
+             $('.side_nav').fadeIn();
+          } else {
+               $('.side_nav').fadeOut();
+            }
+        });
+
+
+        $("#top").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+
+        var target = $("#skill").offset().top;
+        $("#section2").click(function() {
+            $('html, body').animate({
+                scrollTop : target
+            }, 400);
+            return false;
+        });
+        var target2 = $("#work_01").offset().top;
+        $("#section3").click(function() {
+            $('html, body').animate({
+                scrollTop : target2
+            }, 400);
+            return false;
+        });
+    });
+
+
+// slick
+    $('.slider-for').slick({
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         fade: true,
+         arrows: false,
+         asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+         slidesToShow: 2,
+         slidesToScroll: 1,
+         asNavFor: '.slider-for',
+         centerMode: true,
+         focusOnSelect: true,
+         draggable: false,
+         arrows: true,
+         variableWidth: true,
+         responsive: [
+					{
+						breakpoint: 768, //화면 사이즈 768px
+						settings: {
+							slidesToShow:2
+						}
+					}]
+        });
+</script>
+</body>
+</html>
