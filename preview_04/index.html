@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../imgs/favicon.ico">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <meta name="author" content="Sujin Ryu"> -->
+    <title>UI 개발자 류수진</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="../index.html" class="logo"><img src="../imgs/logo.png" width="36"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#skill">ABOUT</a></li>
+                    <li><a href="../index.html#work">PORTFOLIO</a></li>
+                    <li><a href="/translation/" target="_blank">BLOG</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+
+            <section class="preview">
+                <h2>화상회의</h2>
+                <p>메인/회의화면/화상 분할화면(최대50명)/대기화면</p>
+                <div class="tags">
+                    <span class="item">HTML5</span><span class="item">CSS3</span><span class="item v2">jQuery</span>
+                </div>
+                <div class="prev_img">
+                    <img src="../imgs/rtc_01.png" alt="화상회의 메인">
+                    <img src="../imgs/rtc_02.png" alt="화상회의 화면">
+                    <img src="../imgs/rtc_03.png" alt="화상회의 분할화면">
+                    <img src="../imgs/rtc_04.png" alt="화상회의 분할화면50">
+                    <img src="../imgs/rtc_05.png" alt="화상회의 대기화면">
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="side_nav itself">
+            <a href="#" id="top"><span class="sp_img">TOP</span></a>
+        </aside>
+
+        <footer>
+            <ul>
+    			<li class="copyright">Copyright © <strong>2021 RSJ.</strong> All rights reserverd</li>
+    			<li>Email : s.ryu8643@gmail.com</li>
+    		</ul>
+        </footer>
+    </div>
+
+<script src="../js/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function() {
+    $(window).scroll(function() {
+         if ($(this).scrollTop() > 250) {
+             $('.side_nav').fadeIn();
+          } else {
+               $('.side_nav').fadeOut();
+            }
+        });
+
+
+        $("#top").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+
+    });
+
+</script>
+</body>
+</html>
