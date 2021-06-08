@@ -15,7 +15,7 @@
 <body>
     <div class="wrapper">
         <header>
-            <a href="index.html" class="logo"><img src="imgs/logo.png" width="36"></a>
+            <h1><a href="index.html" class="logo"><img src="imgs/logo.png" width="36"><span class="blind">류수진 포트폴리오</span></a></h1>
             <nav>
                 <ul>
                     <li><a href="#skill">ABOUT</a></li>
@@ -273,7 +273,6 @@
     </div>
 
 <script src="js/jquery-3.6.0.min.js"></script>
-<script src="js/slick.js"></script>
 
 <script>
 
@@ -313,31 +312,6 @@ $(function() {
     });
 
 
-// slick
-    $('.slider-for').slick({
-         slidesToShow: 1,
-         slidesToScroll: 1,
-         fade: true,
-         arrows: false,
-         asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-         slidesToShow: 2,
-         slidesToScroll: 1,
-         asNavFor: '.slider-for',
-         centerMode: true,
-         focusOnSelect: true,
-         draggable: false,
-         arrows: true,
-         variableWidth: true,
-         responsive: [
-					{
-						breakpoint: 768, //화면 사이즈 768px
-						settings: {
-							slidesToShow:2
-						}
-					}]
-        });
 </script>
 </body>
 </html>
