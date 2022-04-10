@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+    <meta property="og:title" content="포트폴리오">
+    <meta property="og:description" content="UI개발자 류수진입니다.">
+    <meta property="og:image" content="./imgs/og.png">
     <meta property="og:locale" content="ko_KR">
     <link rel="shortcut icon" href="imgs/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
@@ -300,12 +303,8 @@
 
 
         </main>
-        <aside class="side_nav">
-            <ul>
-                <li><a href="#" id="top" title="TOP으로 가기"><span>1</span></a></li>
-                <li><a href="#skill"  id="section2" title="두번째 섹션"><span>2</span></a></li>
-                <li><a href="#work_01" id="section3" title="세번째 섹션"><span>3</span></a></li>
-            </ul>
+        <aside class="side_nav itself">
+            <a href="#" id="top" style="display:none"><span class="sp_img">TOP</span></a>
         </aside>
         <footer>
             <ul>
@@ -319,15 +318,12 @@
 <script src="js/jquery-3.6.0.min.js"></script>
 
 <script>
-
-//side_nav
-
 $(function() {
     $(window).scroll(function() {
          if ($(this).scrollTop() > 250) {
-             $('.side_nav').fadeIn();
+             $('#top').fadeIn();
           } else {
-               $('.side_nav').fadeOut();
+               $('#top').fadeOut();
             }
         });
 
@@ -339,22 +335,8 @@ $(function() {
             return false;
         });
 
-        var target = $("#skill").offset().top;
-        $("#section2").click(function() {
-            $('html, body').animate({
-                scrollTop : target
-            }, 400);
-            return false;
-        });
-        var target2 = $("#work_01").offset().top;
-        $("#section3").click(function() {
-            $('html, body').animate({
-                scrollTop : target2
-            }, 400);
-            return false;
-        });
-    });
 
+    });
 
 </script>
 </body>
