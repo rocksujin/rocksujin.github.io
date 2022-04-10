@@ -59,9 +59,9 @@
 $(function() {
     $(window).scroll(function() {
          if ($(this).scrollTop() > 250) {
-             $('.side_nav').fadeIn();
+             $('#top').fadeIn();
           } else {
-               $('.side_nav').fadeOut();
+               $('#top').fadeOut();
             }
         });
 
@@ -72,6 +72,7 @@ $(function() {
             }, 400);
             return false;
         });
+
 
     });
 
